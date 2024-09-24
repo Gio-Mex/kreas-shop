@@ -3,21 +3,21 @@ import AppProductCard from "./AppProductCard.vue";
 import { useGalleryStore } from "../stores/galleryStore";
 import { onMounted } from "vue";
 
-const storeGallery = useGalleryStore();
+const galleryStore = useGalleryStore();
 
 onMounted(() => {
-  storeGallery.fetchGallery();
+  galleryStore.fetchGallery();
 });
 </script>
 
 <template>
   <!-- Home gallery -->
   <div
-    v-if="storeGallery.gallery.length > 0"
+    v-if="galleryStore.gallery.length > 0"
     class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 pb-8 md:px-8 md:gap-8"
   >
     <AppProductCard
-      v-for="product in storeGallery.gallery"
+      v-for="product in galleryStore.gallery"
       :key="product.id"
       :product="product"
     />
