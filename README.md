@@ -5,7 +5,7 @@
 ## Description
 
 This project reproduces the functioning of a hypothetical synthetic meat shop, with the product search function and shopping cart. It was developed with Vue.js in Typescript.
-![Screenshot of home gallery](public/img/home-img.png)
+![Screenshot of home gallery](public/home-img.png)
 
 ## Installation
 
@@ -33,7 +33,7 @@ When you open the app, a gallery of hypothetical products loads.
 You can use the magnifying glass at the top right to open the dialog and enter the name of a product to search for: if present in the product list it will be displayed.  
 Selecting a product will open the details page where you can add it to your cart.  
 In the cart you can change the quantity of a product, delete it, or simulate the purchase.
-![Screenshot of cart](public/img/cart-img.png)
+![Screenshot of cart](public/cart-img.png)
 
 ## Demo
 Try the app [here](https://kreas-shop.netlify.app).
