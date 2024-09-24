@@ -38,4 +38,4 @@ In the cart you can change the quantity of a product, delete it, or simulate the
 ![Screenshot of cart](public/cart-img.png)
 
 ## Demo
-Try the app [here](https://kreas-shop.netlify.app).
+Try the app [here](https://vue-kreas-shop.netlify.app).

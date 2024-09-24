@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useCartStore } from "@/stores/cartStore";
-import { onMounted } from "vue";
 import { useRouter } from "vue-router";
-import { CartProduct } from "@/interfaces/cart";
+import { CartProduct } from "../interfaces/product";
 
 // Shadcn components
 import {

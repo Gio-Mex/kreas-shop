@@ -13,7 +13,7 @@ export const useCartStore = defineStore("cart", {
       if (existingProduct) {
         existingProduct.cartQty += 1;
       } else {
-        product.cartQty = 1;
+        product.cartQty = 1 as CartProduct["cartQty"];
         this.cart.push(product);
       }
     },

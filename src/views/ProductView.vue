@@ -3,7 +3,7 @@ import { useRoute, useRouter } from "vue-router";
 import { useGalleryStore } from "@/stores/galleryStore";
 import { useCartStore } from "@/stores/cartStore";
 import { reactive, onBeforeMount } from "vue";
-import { Product } from "@/interfaces/product";
+import { Product, CartProduct } from "@/interfaces/product";
 
 // Shadcn components
 import { Button } from "@/components/ui/button";
@@ -12,23 +12,23 @@ import { useToast } from "@/components/ui/toast/use-toast";
 
 const route = useRoute();
 const router = useRouter();
-const id = route.params.id as number;
+const id = Number(route.params.id);
 
 const galleryStore = useGalleryStore();
 const cartStore = useCartStore();
 
-let product = reactive<Product>({});
+let product = reactive ({}) as Product;
 
 const { toast } = useToast();
 
 // Get product by id from store gallery
 onBeforeMount(() => {
-  product = galleryStore.getProductById(id);
+  product = galleryStore.getProductById(id) ?? {} as Product;
 });
 
 // Add product to cart function
 const addToCartHandler = () => {
-  cartStore.addToCart(product);
+  cartStore.addToCart(product as CartProduct);
   toastHandler();
 };
 
