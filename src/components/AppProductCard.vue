@@ -24,7 +24,7 @@ const props = defineProps<{
   <div>
     <!-- Gallery card -->
     <Card
-      class="rounded-sm shadow-md"
+      class="rounded-sm shadow-md cursor-pointer"
       @click="router.push(`/product/${product.id}`)"
     >
       <CardHeader>
